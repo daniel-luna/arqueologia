@@ -15,7 +15,8 @@ export const ReviewService = {
       .from("reviews")
       .select("*")
       .eq("site_id", siteId)
-      .order("created_at", { ascending: false });
+      .order("created_at", { ascending: false })
+      .order("id", { ascending: false });
 
     if (error) throw error;
     return (data ?? []) as Review[];
