@@ -1,0 +1,1 @@
+Desarrolla SOLO el frontend conectado a Supabase. No crear backend. Usar React Query, supabase-js, Leaflet clustering, Auth email, componentes desacoplados, servicios, hooks, tipado estricto, loading/error states, panel admin preparado.

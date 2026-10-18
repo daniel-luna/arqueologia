@@ -1,0 +1,3 @@
+create table if not exists profiles(id uuid primary key references auth.users(id),display_name text,role text default 'USER');
+create table if not exists site_images(id uuid primary key default gen_random_uuid(),site_id uuid references sites(id),url text not null,caption text,order_index int default 0);
+create table if not exists ar_elements(id uuid primary key default gen_random_uuid(),site_id uuid references sites(id),name text not null,type text,description text,x double precision,y double precision,z double precision,model_url text,animation_url text);

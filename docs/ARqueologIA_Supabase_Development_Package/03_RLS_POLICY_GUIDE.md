@@ -1,0 +1,1 @@
+sites SELECT público, escritura ADMIN. reviews SELECT público, INSERT autenticado, UPDATE/DELETE propietario. profiles propio usuario/Admin.

@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/* Leaflet */
+@import "leaflet/dist/leaflet.css";
+
+/* Leaflet MarkerCluster */
+@import "leaflet.markercluster/dist/MarkerCluster.css";
+@import "leaflet.markercluster/dist/MarkerCluster.Default.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.92 0.01 80);
+  --foreground: oklch(0.2 0.02 60);
+  --card: oklch(0.97 0.01 85);
+  --card-foreground: oklch(0.2 0.02 60);
+  --popover: oklch(0.97 0.01 85);
+  --popover-foreground: oklch(0.2 0.02 60);
+  --primary: oklch(0.4 0.06 50);
+  --primary-foreground: oklch(0.95 0.01 85);
+  --secondary: oklch(0.7 0.04 60);
+  --secondary-foreground: oklch(0.2 0.02 60);
+  --muted: oklch(0.85 0.02 75);
+  --muted-foreground: oklch(0.4 0.02 60);
+  --accent: oklch(0.65 0.08 40);
+  --accent-foreground: oklch(0.95 0.01 85);
+  --destructive: oklch(0.55 0.12 30);
+  --destructive-foreground: oklch(0.95 0.01 85);
+  --border: oklch(0.75 0.03 65);
+  --input: oklch(0.75 0.03 65);
+  --ring: oklch(0.4 0.06 50);
+  --chart-1: oklch(0.55 0.12 40);
+  --chart-2: oklch(0.5 0.08 55);
+  --chart-3: oklch(0.45 0.06 50);
+  --chart-4: oklch(0.6 0.1 35);
+  --chart-5: oklch(0.65 0.08 60);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  min-height: 100dvh;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.marker-cluster-small {
+  background-color: oklch(0.7 0.04 60 / 0.6);
+}
+.marker-cluster-small div {
+  background-color: oklch(0.65 0.04 55);
+  color: oklch(0.15 0.01 50);
+}
+.marker-cluster-medium {
+  background-color: oklch(0.5 0.06 50 / 0.6);
+}
+.marker-cluster-medium div {
+  background-color: oklch(0.45 0.06 45);
+  color: oklch(0.95 0.01 85);
+}
+.marker-cluster-large {
+  background-color: oklch(0.4 0.06 50 / 0.6);
+}
+.marker-cluster-large div {
+  background-color: oklch(0.35 0.06 45);
+  color: oklch(0.95 0.01 85);
+}

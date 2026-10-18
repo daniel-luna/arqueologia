@@ -1,0 +1,1 @@
+React19+TS+Vite+TanStackQuery+Tailwind+Leaflet+supabase-js. Estructura src/{pages,components,hooks,services,lib}. Servicios: Site,Review,Auth,Image,AR. Hooks: useSites,useSite,useReviews,useAuth,useGeolocation.
